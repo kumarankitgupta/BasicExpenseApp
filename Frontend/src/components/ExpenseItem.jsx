@@ -9,7 +9,6 @@ function ExpenseItem(props) {
     axios
       .delete(`http://localhost:3000/v1/expense/delete/${eId}`)
       .then((response) => {
-        console.log(props);
         props.toggleDelete();
         alert(response.data.message);
       })
